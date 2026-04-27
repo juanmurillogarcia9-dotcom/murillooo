@@ -1,0 +1,30 @@
+*{
+    margin: 8px;
+}
+
+#Nt{
+  text-align: center;
+} 
+
+
+.H{
+ background-color: rgb(58, 108, 173);
+ color:rgb(245, 239, 239);
+ 
+ 
+}
+.H{
+    background-color: rgb(89, 109, 223);
+    border:3px rgb(85, 73, 56) solid;
+}
+
+.J{
+    background-color: rgb(120, 146, 219);
+    border: 3px black solid;
+}
+
+.J2{
+    background-color: rgb(173, 173, 201);
+    border: 3px rgb(39, 35, 35) solid;
+
+}

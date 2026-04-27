@@ -1,0 +1,294 @@
+* {
+  margin: 0;                  
+  padding: 0;                 
+  box-sizing: border-box;     /* Asegura que el padding no aumente el tamaño total del ancho/alto */
+}
+#Titulo{
+  margin-left: 50px;
+}
+
+html, body {
+  height: 100vh;              /* Fuerza al cuerpo a ocupar el 100% de la altura de la pantalla */
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif; /* Define el tipo de letra principal */
+}
+
+/*  Barra de navegación superior */
+nav {
+  background: #2c2c2c;      
+  padding: 5px 100px;          /* Espacio interno arriba/abajo y a los lados */
+  overflow: hidden;           
+
+}
+
+.nombre-nav {
+  float: left;                /* Empuja el nombre hacia la izquierda */
+  color: white;               
+  font-size: 30px;            /* Tamaño de letra del nombre */
+  font-weight: 300;           /* Grosor de letra delgado */
+  line-height: 1.6;           /* Altura de línea para centrar verticalmente */
+}
+
+
+.nombre-nav strong {
+  font-weight: 800;           /* Hace que la parte del nombre en negrita sea más gruesa */
+}
+
+.enlaces-nav {
+  float: right;               /* Empuja los links hacia la derecha */
+  line-height: 1.6;           /* Alineación vertical igual al nombre */
+}
+
+.enlaces-nav a {
+  color: #cccccc;             
+  text-decoration: none;      /* Quita la línea de subrayado de los links */
+  margin-left: 28px;          /* Separación entre cada botón de enlace */
+  font-size: 25px;            /* Tamaño de letra de los links */
+  letter-spacing: 0.5px;      /* Espacio extra entre cada letra */
+  transition: color 0.2s;     /* Hace que el cambio de color al pasar el mouse sea suave */
+}
+
+.enlaces-nav a:hover,
+.enlaces-nav a.activo {
+  color: white;               
+  font-weight: 600;           /* Se vuelve un poco más grueso al seleccionarlo */
+}
+
+/* MAIN - Contenedor del contenido */
+main {
+  height: calc(100vh - 53px); /* Altura total de pantalla menos la altura del Nav */
+  overflow-y: auto;           /* Permite hacer scroll hacia abajo si el contenido es largo */
+}
+
+/* SECCIÓN 1 — INICIO */
+.inicio {
+  padding: 40px 80px;         /* Espacio interno para que el contenido no pegue a los bordes */
+  overflow: hidden;           /* Mantiene los elementos internos alineados */
+  min-height: 380px;          /* Altura mínima de la sección */
+}
+
+.imagen-inicio {
+  float: left;                /* Alinea el bloque de imagen a la izquierda */
+  width: 45%;                 /* Ocupa casi la mitad del ancho */
+  text-align: center;         /* Centra la imagen dentro de su bloque */
+  padding-top: 10px;          /* Espacio extra arriba de la imagen */
+}
+
+.imagen-inicio img {
+  width: 100%;                /* La imagen se estira al ancho de su bloque */
+  max-width: 400px;           /* Evita que la imagen se vea demasiado grande */
+}
+
+.texto-inicio {
+  float: right;               /* Alinea el bloque de texto a la derecha */
+  width: 50%;                 /* Ocupa la otra mitad del ancho */
+  padding-top: 20px;          /* Baja un poco el texto para que no pegue arriba */
+}
+
+.texto-inicio h1 {
+  font-size: 52px;            /* Título gigante */
+  font-weight: 700;           /* Letra muy gruesa */
+  color: #e74c3c;             /* Color rojo */
+  margin-bottom: 15px;        /* Espacio debajo del título */
+  line-height: 1.1;           /* Reduce el espacio entre líneas del título */
+}
+
+.texto-inicio p {
+  font-size: 30px;            /* Tamaño de letra del párrafo */
+  color: #555;                /* Gris oscuro para el texto */
+  line-height: 1.7;           /* Más espacio entre líneas para que sea fácil de leer */
+  margin-bottom: 30px;        /* Espacio antes del botón rojo */
+}
+
+.boton-rojo {
+  background: #e74c3c;        /* Fondo rojo del botón */
+  color: white;               /* Texto del botón blanco */
+  border: none;               /* Quita bordes por defecto */
+  padding: 14px 28px;         /* Tamaño interno del botón */
+  font-size: 30px;            /* Letra grande dentro del botón */
+  font-weight: 600;           /* Grosor de letra medio-alto */
+  border-radius: 4px;         /* Redondea ligeramente las esquinas */
+  cursor: pointer;            /* Cambia la flecha por una mano al pasar el mouse */
+  text-decoration: none;      /* Quita subrayado si el botón es un link */
+ 
+}
+
+.boton-rojo:hover {
+  background: #c0392b;        /* Se vuelve un rojo más oscuro al pasar el mouse */
+}
+
+/* SECCIÓN 2 — QUIEN SOY */
+.quien-soy {
+  background: #e74c3c;        /* Fondo completamente rojo */
+  padding: 15px 80px;         /* Espaciado interno */
+  text-align: center;         /* Centra todo el contenido (foto y texto) */
+}
+
+.foto-perfil {
+  width: 200px;               /* Ancho de la foto de perfil */
+  height: 200px;              /* Alto de la foto de perfil */
+  border-radius: 50%;         /* Hace que la foto sea un círculo perfecto */
+  border: 4px solid white;    /* Marco blanco alrededor de la foto */
+  margin: 0 auto 10px auto;   /* Centra la foto horizontalmente y le da espacio abajo */
+  object-fit: cover;          /* Ajusta la imagen dentro del círculo sin deformarla */
+}
+
+.quien-soy blockquote {
+  font-size: 30px;            /* Tamaño del texto de la frase */
+  color: white;               /* Letra blanca */
+  line-height: 1.5;           /* Espaciado entre líneas */
+  max-width: 800px;           /* Limita el ancho del texto para que no sea muy largo */
+  margin: 0 auto 5px auto;    /* Centra el bloque de texto */
+}
+
+.quien-soy cite {
+  color: rgba(255,255,255,0.8); /* Blanco transparente para el nombre del autor */
+  font-size: 15px;            /* Letra pequeña para el autor */
+  font-style: italic;         /* Letra en cursiva */
+}
+
+/* SECCIÓN 3 — PROYECTOS */
+.proyectos {
+  background: #f2f2f2;        /* Fondo gris claro */
+  padding: 15px 90px;         /* Padding de 80px para que todo alinee con las secciones de arriba */
+  overflow: hidden;           /* Mantiene las tarjetas dentro del cuadro */
+}
+
+.proyectos h2 {
+  font-size: 60px;            /* Título grande de "Mis Proyectos" */
+  font-weight: 700;           /* Letra gruesa */
+  color: #333;                /* Gris casi negro */
+  text-align: center;         /* Centra el título horizontalmente */
+  margin-bottom: 40px;        /* Espacio grande antes de las tarjetas */
+}
+
+.contenedor-tarjetas {
+  overflow: hidden;           /* Contiene los floats de las tarjetas */
+  width: 100%;                /* Ocupa el ancho total disponible */
+}
+
+.tarjeta {
+  float: left;                /* Pone las tarjetas una al lado de la otra */
+  width: 23.5%;               /* Ancho para que quepan 4 tarjetas exactamente */
+  margin-right: 2%;           /* Espacio entre cada tarjeta */
+  background: white;          /* Fondo blanco para las tarjetas */
+  border-radius: 4px;         /* Redondea las esquinas de las tarjetas */
+  overflow: hidden;           /* Evita que el contenido se salga de la tarjeta */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra suave alrededor de la tarjeta */
+  text-align: center;         /* Centra todo el contenido dentro de la tarjeta */
+  padding-bottom: 25px;       /* Espacio al final de la tarjeta */
+}
+
+.tarjeta:last-child {
+  margin-right: 0;            /* ELIMINA el margen derecho de la última tarjeta para que PEGE al borde */
+}
+
+.tarjeta img {
+  width: 100%;                /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 220px;              /* Altura fija para todas las imágenes (mismo tamaño) */
+  object-fit: cover;          /* Recorta la imagen para que rellene el cuadro sin estirarse */
+}
+
+.cuerpo-tarjeta {
+  padding: 20px 16px;         /* Espacio interno dentro de la tarjeta */
+}
+
+.cuerpo-tarjeta h3 {
+  font-size: 24px;            /* Título del proyecto un poco más grande */
+  font-weight: 700;           /* Negrita para resaltar */
+  color: #333;                /* Gris oscuro */
+  margin-bottom: 12px;        /* Espacio antes de la descripción */
+}
+
+.cuerpo-tarjeta p {
+  font-size: 16px;            /* Letra de la descripción */
+  color: #777;                /* Gris medio para el texto descriptivo */
+  line-height: 1.5;           /* Espaciado de lectura cómodo */
+  margin-bottom: 25px;        /* Espacio antes del botón de la tarjeta */
+  min-height: 100px;          /* ASEGURA que todos los bloques de texto ocupen el mismo espacio vertical */
+  display: flex;              /* Permite usar alineación flexible */
+  align-items: center;        /* Centra el texto verticalmente dentro de los 100px */
+  justify-content: center;    /* Centra el texto horizontalmente */
+}
+
+.btn-ver {
+  background: #e74c3c;        /* Color rojo del botón de proyecto */
+  color: white;               /* Texto blanco */
+  border: none;               /* Quita bordes */
+  padding: 10px 20px;         /* Tamaño del botón (más pequeño que el principal) */
+  font-size: 18px;            /* Letra mediana */
+  font-weight: 600;           /* Letra resaltada */
+  border-radius: 4px;         /* Esquinas redondeadas */
+  cursor: pointer;            /* Mano al pasar el mouse */
+  text-decoration: none;      /* Quita subrayado */
+  display: inline-block;      /* Permite aplicar paddings correctamente */
+}
+
+
+/* PIE DE PÁGINA */
+footer {
+  background: #2c2c2c;        /* Fondo gris oscuro igual que el nav */
+  color: #aaa;                /* Letras gris claro */
+  text-align: right;          /* Alinea el texto a la derecha (con el borde del footer) */
+  padding: 10px 80px;         /* 80px de padding lateral para alinear con las tarjetas de arriba */
+  font-size: 20px;            /* Tamaño de letra del footer */
+}
+
+@media(min-width: 600px){
+  .imagen-inicio,.tarjeta{
+    float: left;
+  }
+  .texto-inicio{
+    float: right;
+  }
+  .imagen-inicio{
+    width: 45%;
+  }
+  .texto-inicio{
+    width: 50%;
+  }
+  .tarjeta{
+    width: 23%;
+    margin-right: 2%;
+  }
+}
+
+/*Celular 300 px*/
+@media(max-width: 600px){
+  body{
+    padding: 0;
+  }
+  .nav,.selection, .nombre-nav, .enlaces-nav, 
+    .imagen-inicio, .texto-inicio, .tarjeta{
+      float: none;
+      width: 100%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .texto-inicio h1{
+      font-size: 2rem;
+      margin-top: 15px;
+    }
+    .texto-inicio p, .quien-soy p{
+      font-size: 1.1rem;
+    }
+    .imagen-inicio img, .tarjeta img{
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+    }
+    footer{
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+    }
+    main{
+      height: auto;
+      min-width: auto;
+    }
+
+}
