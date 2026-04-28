@@ -229,11 +229,9 @@ footer {
   font-size: 20px;            /* Tamaño de letra del footer */
 }
 
-/* ========================================= */
-/* RESPONSIVE DESIGN */
-/* ========================================= */
 
-/* Pantallas hasta 1000px */
+
+/* Pantalla hasta 1000px */
 @media (max-width: 1000px) {
   nav {
     padding: 5px 40px;
@@ -277,20 +275,20 @@ footer {
   }
 }
 
-/* Pantallas entre 701px y 1000px (2 columnas) */
+/* Pantalla entre 701px-1000px  */
 @media (max-width: 1000px) and (min-width: 701px) {
   .tarjeta {
-    width: 48%;               /* Dos columnas (50% - margen) */
+    width: 48%;              
     margin-right: 4%;         /* Espacio entre columnas */
   }
   
   .tarjeta:nth-child(2n) {
-    margin-right: 0;          /* Elimina margen en las tarjetas pares (2,4,6...) */
+    margin-right: 0;          
   }
   
   .tarjeta:nth-child(3),
   .tarjeta:nth-child(4) {
-    margin-top: 30px;         /* Espacio entre filas */
+    margin-top: 30px;         
   }
 }
 
@@ -369,7 +367,7 @@ footer {
   }
 }
 
-/* Pantallas hasta 480px */
+/* Pantalla hasta 480px */
 @media (max-width: 480px) {
   .nombre-nav {
     float: none;
@@ -418,7 +416,7 @@ footer {
     margin-bottom: 25px;
   }
   
-  /* Una sola columna */
+  /* Una columna */
   .tarjeta {
     width: 100%;
     margin-right: 0;
@@ -435,7 +433,7 @@ footer {
   }
 }
 
-/* Pantallas hasta 300px (muy pequeñas) */
+/* Pantalla hasta 300px */
 @media (max-width: 300px) {
   .nombre-nav {
     font-size: 18px;
