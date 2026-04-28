@@ -233,49 +233,52 @@ footer {
   font-size: 20px;            /* Tamaño de letra del footer */
 }
  
-/* Celular 300px */
+
+
 @media (max-width: 557px) {
-  body {
-    padding: 0;
-    margin: 0;
+  
+  
+  nav, .inicio, .quien-soy, .proyectos, footer,
+  .nombre-nav, .enlaces-nav, .imagen-inicio, .texto-inicio, .tarjeta {
+    float: none;       
+    width: 100%;       
+    margin: 0 auto;    
+    text-align: center; 
+    padding: 15px;     
   }
 
-  .nav, .selection, .nombre-nav, .enlaces-nav, 
-  .imagen-inicio, .texto-inicio, .tarjeta {
-    float: none;
-    width: 300px;         
-    margin: 0 auto;       
-    text-align: center;   
-    padding: 20px 0;     
-    box-sizing: border-box; 
-  }
-
+  /* Ajustes para pantalla pequeña */
   .texto-inicio h1 {
-    font-size: 2rem;
-    margin-top: 15px;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 
-  .texto-inicio p, .quien-soy p {
-    font-size: 1.1rem;
-    margin: 10px 0;
+  .texto-inicio p, .quien-soy blockquote {
+    font-size: 1.2rem;
+    width: 90%;        
+    margin: 10px auto;
+  }
+
+  /* Imágenes responsivas */
+  .imagen-inicio img, .tarjeta img {
+    width: 280px;      
+    height: auto;
   }
 
   
-  .imagen-inicio img, .tarjeta img {
-    width: 280px;         
-    height: auto;
-    margin: 0 auto;       
+  .tarjeta {
+    margin-bottom: 20px; 
+    border-bottom: 1px solid #ddd; 
+  }
+
+  /* Enlaces del Nav */
+  .enlaces-nav a {
+    margin: 5px 10px;
+    font-size: 1.1rem;
   }
 
   footer {
     text-align: center;
-    width: 100%;
-    padding: 20px 0;
-    clear: both;          
-  }
-
-  main {
-    height: auto;
-    width: 100%;
+    font-size: 1rem;
   }
 }
