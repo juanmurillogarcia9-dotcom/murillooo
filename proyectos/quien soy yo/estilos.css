@@ -3,7 +3,8 @@
   padding: 0;                 /* Elimina el espacio interior por defecto de todos los elementos */
   box-sizing: border-box;     /* Asegura que el padding no aumente el tamaño total del ancho/alto */
 }
-#Nombre{
+
+#Nombre {
   margin-left: 50px;
 }
 
@@ -15,9 +16,8 @@ html, body {
 /*  Barra de navegación superior */
 nav {
   background: #2c2c2c;        /* Fondo gris casi negro */
-  padding: 5px 100px;          /* Espacio interno arriba/abajo y a los lados */
+  padding: 5px 100px;         /* Espacio interno arriba/abajo y a los lados */
   overflow: hidden;           /* Contiene los elementos flotantes internos */
-
 }
 
 .nombre-nav {
@@ -27,7 +27,6 @@ nav {
   font-weight: 300;           /* Grosor de letra delgado */
   line-height: 1.6;           /* Altura de línea para centrar verticalmente */
 }
-
 
 .nombre-nav strong {
   font-weight: 800;           /* Hace que la parte del nombre en negrita sea más gruesa */
@@ -110,14 +109,13 @@ main {
   border-radius: 4px;         /* Redondea ligeramente las esquinas */
   cursor: pointer;            /* Cambia la flecha por una mano al pasar el mouse */
   text-decoration: none;      /* Quita subrayado si el botón es un link */
- 
 }
 
 .boton-rojo:hover {
   background: #c0392b;        /* Se vuelve un rojo más oscuro al pasar el mouse */
 }
 
-/*2.QUIEN SOY */
+/* 2.QUIEN SOY */
 .quien-soy {
   background: #e74c3c;        /* Fondo completamente rojo */
   padding: 15px 80px;         /* Espaciado interno */
@@ -142,7 +140,7 @@ main {
 }
 
 .quien-soy cite {
-  color: white; /* Blanco transparente para el nombre del autor */
+  color: white;               /* Blanco transparente para el nombre del autor */
   font-size: 15px;            /* Letra pequeña para el autor */
   font-style: italic;         /* Letra en cursiva */
 }
@@ -220,9 +218,7 @@ main {
   border-radius: 4px;         /* Esquinas redondeadas */
   cursor: pointer;            /* Mano al pasar el mouse */
   text-decoration: none;      /* Quita subrayado */
-  
 }
-
 
 /* PIE DE PÁGINA */
 footer {
@@ -232,53 +228,265 @@ footer {
   padding: 10px 80px;         /* 80px de padding lateral para alinear con las tarjetas de arriba */
   font-size: 20px;            /* Tamaño de letra del footer */
 }
- 
 
+/* ========================================= */
+/* RESPONSIVE DESIGN */
+/* ========================================= */
 
-@media (max-width: 557px) {
+/* Pantallas hasta 1000px */
+@media (max-width: 1000px) {
+  nav {
+    padding: 5px 40px;
+  }
   
+  .inicio {
+    padding: 40px 40px;
+  }
   
-  nav, .inicio, .quien-soy, .proyectos, footer,
-  .nombre-nav, .enlaces-nav, .imagen-inicio, .texto-inicio, .tarjeta {
-    float: none;       
-    width: 100%;       
-    margin: 0 auto;    
-    text-align: center; 
-    padding: 15px;     
+  .quien-soy {
+    padding: 15px 40px;
   }
-
-  /* Ajustes para pantalla pequeña */
-  .texto-inicio h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-  }
-
-  .texto-inicio p, .quien-soy blockquote {
-    font-size: 1.2rem;
-    width: 90%;        
-    margin: 10px auto;
-  }
-
-  /* Imágenes responsivas */
-  .imagen-inicio img, .tarjeta img {
-    width: 280px;      
-    height: auto;
-  }
-
   
-  .tarjeta {
-    margin-bottom: 20px; 
-    border-bottom: 1px solid #ddd; 
+  .proyectos {
+    padding: 15px 40px;
   }
-
-  /* Enlaces del Nav */
-  .enlaces-nav a {
-    margin: 5px 10px;
-    font-size: 1.1rem;
-  }
-
+  
   footer {
+    padding: 10px 40px;
+  }
+  
+  .texto-inicio h1 {
+    font-size: 42px;
+  }
+  
+  .texto-inicio p {
+    font-size: 24px;
+  }
+  
+  .boton-rojo {
+    font-size: 24px;
+    padding: 10px 22px;
+  }
+  
+  .quien-soy blockquote {
+    font-size: 24px;
+  }
+  
+  .proyectos h2 {
+    font-size: 50px;
+  }
+}
+
+/* Pantallas entre 701px y 1000px (2 columnas) */
+@media (max-width: 1000px) and (min-width: 701px) {
+  .tarjeta {
+    width: 48%;               /* Dos columnas (50% - margen) */
+    margin-right: 4%;         /* Espacio entre columnas */
+  }
+  
+  .tarjeta:nth-child(2n) {
+    margin-right: 0;          /* Elimina margen en las tarjetas pares (2,4,6...) */
+  }
+  
+  .tarjeta:nth-child(3),
+  .tarjeta:nth-child(4) {
+    margin-top: 30px;         /* Espacio entre filas */
+  }
+}
+
+/* Pantallas hasta 700px */
+@media (max-width: 700px) {
+  #Nombre {
+    margin-left: 20px;
+  }
+  
+  nav {
+    padding: 5px 20px;
+  }
+  
+  .nombre-nav {
+    font-size: 24px;
+  }
+  
+  .enlaces-nav a {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  
+  .inicio {
+    padding: 30px 20px;
+  }
+  
+  .quien-soy {
+    padding: 15px 20px;
+  }
+  
+  .proyectos {
+    padding: 15px 20px;
+  }
+  
+  footer {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .imagen-inicio {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .texto-inicio {
+    float: none;
+    width: 100%;
     text-align: center;
-    font-size: 1rem;
+  }
+  
+  .texto-inicio h1 {
+    font-size: 36px;
+  }
+  
+  .texto-inicio p {
+    font-size: 20px;
+  }
+  
+  .boton-rojo {
+    font-size: 20px;
+    padding: 8px 18px;
+  }
+  
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .quien-soy blockquote {
+    font-size: 20px;
+  }
+  
+  .proyectos h2 {
+    font-size: 40px;
+  }
+}
+
+/* Pantallas hasta 480px */
+@media (max-width: 480px) {
+  .nombre-nav {
+    float: none;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #Nombre {
+    margin-left: 0;
+  }
+  
+  .enlaces-nav {
+    float: none;
+    text-align: center;
+  }
+  
+  .enlaces-nav a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  .inicio {
+    padding: 20px 15px;
+  }
+  
+  .texto-inicio h1 {
+    font-size: 28px;
+  }
+  
+  .texto-inicio p {
+    font-size: 18px;
+  }
+  
+  .boton-rojo {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  
+  .quien-soy blockquote {
+    font-size: 18px;
+  }
+  
+  .proyectos h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  
+  /* Una sola columna */
+  .tarjeta {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+    float: none;
+  }
+  
+  .tarjeta:last-child {
+    margin-bottom: 0;
+  }
+  
+  .cuerpo-tarjeta p {
+    min-height: auto;
+  }
+}
+
+/* Pantallas hasta 300px (muy pequeñas) */
+@media (max-width: 300px) {
+  .nombre-nav {
+    font-size: 18px;
+  }
+  
+  .enlaces-nav a {
+    font-size: 12px;
+    margin: 0 6px;
+  }
+  
+  .texto-inicio h1 {
+    font-size: 22px;
+  }
+  
+  .texto-inicio p {
+    font-size: 14px;
+  }
+  
+  .boton-rojo {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .quien-soy blockquote {
+    font-size: 14px;
+  }
+  
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .proyectos h2 {
+    font-size: 24px;
+  }
+  
+  .cuerpo-tarjeta h3 {
+    font-size: 18px;
+  }
+  
+  .cuerpo-tarjeta p {
+    font-size: 12px;
+  }
+  
+  .btn-ver {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  footer {
+    font-size: 10px;
+    text-align: center;
   }
 }
